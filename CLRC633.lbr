@@ -183,6 +183,7 @@
 <pin name="IRQ" x="-25.4" y="-2.54" length="middle"/>
 <text x="-5.08" y="40.64" size="1.778" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-40.64" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="VSS" x="-10.16" y="-43.18" length="middle" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -223,6 +224,7 @@
 <connect gate="G$1" pin="TX2" pad="15"/>
 <connect gate="G$1" pin="VDD" pad="8"/>
 <connect gate="G$1" pin="VMID" pad="14"/>
+<connect gate="G$1" pin="VSS" pad="EP"/>
 <connect gate="G$1" pin="XTAL1" pad="19"/>
 <connect gate="G$1" pin="XTAL2" pad="20"/>
 </connects>

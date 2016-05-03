@@ -1,1 +1,1 @@
-# rfidbadge
+# RFID badge for DEF CON
