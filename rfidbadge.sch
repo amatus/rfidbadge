@@ -15348,7 +15348,7 @@ www.irf.com&lt;p&gt;
 <part name="C8" library="rcl" deviceset="C-EU" device="C0603K" value="1 uF">
 <attribute name="PROD_ID" value="311-1443-1-ND"/>
 </part>
-<part name="L1" library="rcl" deviceset="L-US" device="L0201"/>
+<part name="L1" library="rcl" deviceset="L-US" device="L0201" value="22 nH"/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C0603K" value="0.1 uF">
 <attribute name="PROD_ID" value="311-1088-1-ND"/>
 </part>
@@ -15382,7 +15382,9 @@ www.irf.com&lt;p&gt;
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="VDD4" library="supply1" deviceset="VDD" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="56"/>
-<part name="Q1" library="transistor-small-signal" deviceset="BSS123" device=""/>
+<part name="Q1" library="transistor-small-signal" deviceset="BSS123" device="">
+<attribute name="PROD_ID" value="2N7002ET1GOSCT-ND"/>
+</part>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="ISP" library="pinhead" deviceset="PINHD-2X3" device=""/>
 <part name="VDD5" library="supply1" deviceset="VDD" device=""/>
@@ -15429,7 +15431,9 @@ www.irf.com&lt;p&gt;
 <part name="C28" library="rcl" deviceset="C-EU" device="C0603K">
 <attribute name="PROD_ID" value="311-1060-1-ND"/>
 </part>
-<part name="U$1" library="battery_holder" deviceset="AAA_X3" device=""/>
+<part name="U$1" library="battery_holder" deviceset="AAA_X3" device="">
+<attribute name="PROD_ID" value="36-2479-ND"/>
+</part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="VDD6" library="supply1" deviceset="VDD" device=""/>
 </parts>
@@ -15453,7 +15457,7 @@ www.irf.com&lt;p&gt;
 </instance>
 <instance part="GND3" gate="1" x="127" y="-58.42"/>
 <instance part="VDD1" gate="G$1" x="-30.48" y="35.56"/>
-<instance part="VDD2" gate="G$1" x="45.72" y="-22.86"/>
+<instance part="VDD2" gate="G$1" x="43.18" y="-22.86"/>
 <instance part="C3" gate="G$1" x="66.04" y="-43.18">
 <attribute name="PROD_ID" x="66.04" y="-43.18" size="1.778" layer="96" display="off"/>
 </instance>
@@ -15509,7 +15513,9 @@ www.irf.com&lt;p&gt;
 <instance part="GND7" gate="1" x="2.54" y="45.72"/>
 <instance part="VDD4" gate="G$1" x="-30.48" y="83.82"/>
 <instance part="R1" gate="G$1" x="-30.48" y="66.04" rot="R90"/>
-<instance part="Q1" gate="G$1" x="-30.48" y="53.34"/>
+<instance part="Q1" gate="G$1" x="-30.48" y="53.34">
+<attribute name="PROD_ID" x="-30.48" y="53.34" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND8" gate="1" x="-30.48" y="43.18"/>
 <instance part="ISP" gate="A" x="-15.24" y="-50.8"/>
 <instance part="VDD5" gate="G$1" x="-2.54" y="-43.18"/>
@@ -15556,7 +15562,9 @@ www.irf.com&lt;p&gt;
 <instance part="C28" gate="G$1" x="129.54" y="43.18">
 <attribute name="PROD_ID" x="129.54" y="43.18" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="U$1" gate="G$1" x="91.44" y="76.2"/>
+<instance part="U$1" gate="G$1" x="91.44" y="76.2">
+<attribute name="PROD_ID" x="91.44" y="76.2" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND10" gate="1" x="91.44" y="66.04"/>
 <instance part="VDD6" gate="G$1" x="91.44" y="88.9"/>
 </instances>
@@ -15762,39 +15770,6 @@ www.irf.com&lt;p&gt;
 <junction x="-30.48" y="22.86"/>
 </segment>
 <segment>
-<pinref part="VDD2" gate="G$1" pin="VDD"/>
-<wire x1="45.72" y1="-25.4" x2="45.72" y2="-27.94" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="PVDD"/>
-<wire x1="45.72" y1="-27.94" x2="68.58" y2="-27.94" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="VDD"/>
-<wire x1="68.58" y1="-30.48" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="-30.48" x2="45.72" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="-30.48" x2="45.72" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="45.72" y="-27.94"/>
-<pinref part="U2" gate="G$1" pin="AVDD"/>
-<wire x1="68.58" y1="-35.56" x2="58.42" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-35.56" x2="45.72" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="-35.56" x2="45.72" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="45.72" y="-30.48"/>
-<pinref part="U2" gate="G$1" pin="DVDD"/>
-<wire x1="68.58" y1="-38.1" x2="66.04" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="-38.1" x2="45.72" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="-38.1" x2="45.72" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="45.72" y="-35.56"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="66.04" y1="-40.64" x2="66.04" y2="-38.1" width="0.1524" layer="91"/>
-<junction x="66.04" y="-38.1"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="-40.64" x2="58.42" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="58.42" y="-35.56"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="-40.64" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="50.8" y="-30.48"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="-40.64" x2="43.18" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="-27.94" x2="45.72" y2="-27.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="58.42" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="+"/>
@@ -15833,6 +15808,23 @@ www.irf.com&lt;p&gt;
 <pinref part="VDD6" gate="G$1" pin="VDD"/>
 <pinref part="U$1" gate="G$1" pin="P$2"/>
 <wire x1="91.44" y1="86.36" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="PVDD"/>
+<wire x1="43.18" y1="-27.94" x2="50.8" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="-27.94" x2="68.58" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="-40.64" x2="43.18" y2="-27.94" width="0.1524" layer="91"/>
+<pinref part="VDD2" gate="G$1" pin="VDD"/>
+<wire x1="43.18" y1="-25.4" x2="43.18" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="43.18" y="-27.94"/>
+<pinref part="U2" gate="G$1" pin="VDD"/>
+<wire x1="68.58" y1="-30.48" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="-40.64" x2="50.8" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="-30.48" x2="50.8" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="50.8" y="-30.48"/>
+<junction x="50.8" y="-27.94"/>
 </segment>
 </net>
 <net name="TVDD" class="0">
@@ -16238,6 +16230,22 @@ www.irf.com&lt;p&gt;
 <wire x1="124.46" y1="-22.86" x2="124.46" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="-25.4" x2="144.78" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="AVDD"/>
+<wire x1="68.58" y1="-35.56" x2="58.42" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="-40.64" x2="58.42" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="DVDD"/>
+<wire x1="68.58" y1="-38.1" x2="66.04" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="66.04" y1="-40.64" x2="66.04" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
