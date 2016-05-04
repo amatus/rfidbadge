@@ -15250,6 +15250,53 @@ www.irf.com&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="battery_holder">
+<packages>
+<package name="AAA_X3">
+<pad name="NEG" x="23.7236" y="0" drill="1" shape="octagon"/>
+<pad name="POS" x="23.7236" y="-12.7" drill="1" shape="octagon"/>
+<wire x1="26.3144" y1="18.7452" x2="26.3144" y2="-18.7452" width="0.127" layer="21"/>
+<wire x1="26.3144" y1="-18.7452" x2="-26.3144" y2="-18.7452" width="0.127" layer="21"/>
+<wire x1="-26.3144" y1="-18.7452" x2="-26.3144" y2="18.7452" width="0.127" layer="21"/>
+<wire x1="-26.3144" y1="18.7452" x2="26.3144" y2="18.7452" width="0.127" layer="21"/>
+<rectangle x1="-26.67" y1="-19.05" x2="26.67" y2="19.05" layer="39"/>
+</package>
+</packages>
+<symbols>
+<symbol name="AAA_X3">
+<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="3.81" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="2.54" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="-5.08" visible="off" length="short" direction="pwr" rot="R90"/>
+<pin name="P$2" x="0" y="7.62" visible="off" length="short" direction="pwr" rot="R270"/>
+<wire x1="1.905" y1="5.715" x2="1.905" y2="4.445" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="2.54" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="3.81" x2="0" y2="5.08" width="0.1524" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="AAA_X3">
+<gates>
+<gate name="G$1" symbol="AAA_X3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="AAA_X3">
+<connects>
+<connect gate="G$1" pin="P$1" pad="NEG"/>
+<connect gate="G$1" pin="P$2" pad="POS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -15382,6 +15429,9 @@ www.irf.com&lt;p&gt;
 <part name="C28" library="rcl" deviceset="C-EU" device="C0603K">
 <attribute name="PROD_ID" value="311-1060-1-ND"/>
 </part>
+<part name="U$1" library="battery_holder" deviceset="AAA_X3" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="VDD6" library="supply1" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15506,6 +15556,9 @@ www.irf.com&lt;p&gt;
 <instance part="C28" gate="G$1" x="129.54" y="43.18">
 <attribute name="PROD_ID" x="129.54" y="43.18" size="1.778" layer="96" display="off"/>
 </instance>
+<instance part="U$1" gate="G$1" x="91.44" y="76.2"/>
+<instance part="GND10" gate="1" x="91.44" y="66.04"/>
+<instance part="VDD6" gate="G$1" x="91.44" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -15652,6 +15705,11 @@ www.irf.com&lt;p&gt;
 <wire x1="25.4" y1="-50.8" x2="25.4" y2="-48.26" width="0.1524" layer="91"/>
 <junction x="25.4" y="-48.26"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="91.44" y1="71.12" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="EXTCLK" class="0">
 <segment>
@@ -15770,6 +15828,11 @@ www.irf.com&lt;p&gt;
 <pinref part="VDD5" gate="G$1" pin="VDD"/>
 <wire x1="-10.16" y1="-48.26" x2="-2.54" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="-48.26" x2="-2.54" y2="-45.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="VDD6" gate="G$1" pin="VDD"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
+<wire x1="91.44" y1="86.36" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TVDD" class="0">
