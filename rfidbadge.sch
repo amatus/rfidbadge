@@ -8961,6 +8961,11 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="91.44" y1="71.12" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="IFSEL1"/>
+<wire x1="68.58" y1="7.62" x2="66.04" y2="7.62" width="0.1524" layer="91"/>
+<label x="66.04" y="7.62" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="EXTCLK" class="0">
 <segment>
@@ -9069,6 +9074,11 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <junction x="50.8" y="-30.48"/>
 <junction x="50.8" y="-27.94"/>
 </segment>
+<segment>
+<pinref part="FTDI" gate="A" pin="3"/>
+<wire x1="30.48" y1="-53.34" x2="22.86" y2="-53.34" width="0.1524" layer="91"/>
+<label x="22.86" y="-53.34" size="1.778" layer="95" rot="R180"/>
+</segment>
 </net>
 <net name="TVDD" class="0">
 <segment>
@@ -9103,18 +9113,6 @@ These are standard SMD and PTH capacitors. Normally 10uF, 47uF, and 100uF in ele
 <wire x1="50.8" y1="17.78" x2="50.8" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="IF1/SCL"/>
 <wire x1="50.8" y1="2.54" x2="68.58" y2="2.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="VSS" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="IFSEL1"/>
-<wire x1="68.58" y1="7.62" x2="66.04" y2="7.62" width="0.1524" layer="91"/>
-<label x="66.04" y="7.62" size="1.778" layer="95" rot="R180"/>
-</segment>
-<segment>
-<pinref part="FTDI" gate="A" pin="3"/>
-<wire x1="30.48" y1="-53.34" x2="22.86" y2="-53.34" width="0.1524" layer="91"/>
-<label x="22.86" y="-53.34" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="V4" class="0">
