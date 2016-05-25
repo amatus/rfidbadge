@@ -9868,27 +9868,41 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="VDD4" library="supply1" deviceset="VDD" device=""/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="56"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="56">
+<attribute name="PROD_ID" value="P56GCT-ND"/>
+</part>
 <part name="Q1" library="transistor-small-signal" deviceset="BSS123" device="">
 <attribute name="PROD_ID" value="2N7002ET1GOSCT-ND"/>
 </part>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="ISP" library="pinhead" deviceset="PINHD-2X3" device=""/>
+<part name="ISP" library="pinhead" deviceset="PINHD-2X3" device="">
+<attribute name="PROD_ID" value="952-2121-ND"/>
+</part>
 <part name="VDD5" library="supply1" deviceset="VDD" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="FTDI" library="pinhead" deviceset="PINHD-1X6" device=""/>
+<part name="FTDI" library="pinhead" deviceset="PINHD-1X6" device="">
+<attribute name="PROD_ID" value="952-2270-ND"/>
+</part>
 <part name="C19" library="rcl" deviceset="C-EU" device="C0603K" value="0.1 uF">
 <attribute name="PROD_ID" value="311-1088-1-ND"/>
 </part>
-<part name="R2" library="rcl" deviceset="R-US_" device="R0603" value="1K"/>
-<part name="R3" library="rcl" deviceset="R-US_" device="R0603" value="1K"/>
-<part name="L2" library="SparkFun-Passives" deviceset="INDUCTOR" device="30OHM,1.8A"/>
-<part name="L3" library="SparkFun-Passives" deviceset="INDUCTOR" device="30OHM,1.8A"/>
-<part name="C20" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value=""/>
+<part name="R2" library="rcl" deviceset="R-US_" device="R0603" value="1K">
+<attribute name="PROD_ID" value="P1.0KGCT-ND"/>
 </part>
-<part name="C21" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value=""/>
+<part name="R3" library="rcl" deviceset="R-US_" device="R0603" value="1K">
+<attribute name="PROD_ID" value="P1.0KGCT-ND"/>
+</part>
+<part name="L2" library="SparkFun-Passives" deviceset="INDUCTOR" device="30OHM,1.8A" value="1.2 uH">
+<attribute name="PROD_ID" value="535-12527-1-ND"/>
+</part>
+<part name="L3" library="SparkFun-Passives" deviceset="INDUCTOR" device="30OHM,1.8A" value="1.2 uH">
+<attribute name="PROD_ID" value="535-12527-1-ND"/>
+</part>
+<part name="C20" library="rcl" deviceset="C-EU" device="C0603K" value="100 pF">
+<attribute name="PROD_ID" value="311-1069-1-ND"/>
+</part>
+<part name="C21" library="rcl" deviceset="C-EU" device="C0603K" value="100 pF">
+<attribute name="PROD_ID" value="311-1069-1-ND"/>
 </part>
 <part name="C22" library="rcl" deviceset="C-EU" device="C0603K" value="56 pF">
 <attribute name="PROD_ID" value="445-1278-1-ND"/>
@@ -9911,18 +9925,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="ANT1" library="discrete" deviceset="ANTENNA" device=""/>
 <part name="ANT2" library="discrete" deviceset="ANTENNA" device=""/>
 <part name="ANT3" library="discrete" deviceset="ANTENNA" device=""/>
-<part name="R6" library="rcl" deviceset="R-US_" device="R0603"/>
-<part name="R7" library="rcl" deviceset="R-US_" device="R0603"/>
-<part name="C26" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value=""/>
+<part name="R6" library="rcl" deviceset="R-US_" device="R0603" value="15 k">
+<attribute name="PROD_ID" value="P15KGCT-ND"/>
 </part>
-<part name="C27" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value=""/>
+<part name="R7" library="rcl" deviceset="R-US_" device="R0603" value="15 k">
+<attribute name="PROD_ID" value="P15KGCT-ND"/>
+</part>
+<part name="C26" library="rcl" deviceset="C-EU" device="C0603K" value="1 nF">
+<attribute name="PROD_ID" value="311-1342-1-ND"/>
+</part>
+<part name="C27" library="rcl" deviceset="C-EU" device="C0603K" value="1 nF">
+<attribute name="PROD_ID" value="311-1342-1-ND"/>
 </part>
 <part name="C28" library="rcl" deviceset="C-EU" device="C0603K" value="0.1 uF">
 <attribute name="PROD_ID" value="311-1088-1-ND"/>
 </part>
-<part name="U$1" library="battery_holder" deviceset="AAA_X3" device="">
+<part name="BAT" library="battery_holder" deviceset="AAA_X3" device="">
 <attribute name="PROD_ID" value="36-2479-ND"/>
 </part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -10014,20 +10032,30 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="GND7" gate="1" x="2.54" y="45.72"/>
 <instance part="VDD4" gate="G$1" x="-30.48" y="83.82"/>
-<instance part="R1" gate="G$1" x="-30.48" y="66.04" rot="R90"/>
+<instance part="R1" gate="G$1" x="-30.48" y="66.04" rot="R90">
+<attribute name="PROD_ID" x="-30.48" y="66.04" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
 <instance part="Q1" gate="G$1" x="-30.48" y="53.34">
 <attribute name="PROD_ID" x="-30.48" y="53.34" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND8" gate="1" x="-30.48" y="43.18"/>
-<instance part="ISP" gate="A" x="-15.24" y="-50.8"/>
+<instance part="ISP" gate="A" x="-15.24" y="-50.8">
+<attribute name="PROD_ID" x="-15.24" y="-50.8" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="VDD5" gate="G$1" x="-2.54" y="-43.18"/>
 <instance part="GND9" gate="1" x="-2.54" y="-58.42"/>
-<instance part="FTDI" gate="A" x="33.02" y="-55.88"/>
+<instance part="FTDI" gate="A" x="33.02" y="-55.88">
+<attribute name="PROD_ID" x="33.02" y="-55.88" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="C19" gate="G$1" x="7.62" y="-50.8">
 <attribute name="PROD_ID" x="7.62" y="-50.8" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="R2" gate="G$1" x="129.54" y="27.94" rot="R90"/>
-<instance part="R3" gate="G$1" x="149.86" y="-25.4"/>
+<instance part="R2" gate="G$1" x="129.54" y="27.94" rot="R90">
+<attribute name="PROD_ID" x="129.54" y="27.94" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="R3" gate="G$1" x="149.86" y="-25.4">
+<attribute name="PROD_ID" x="149.86" y="-25.4" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="L2" gate="G$1" x="129.54" y="10.16" rot="R270"/>
 <instance part="L3" gate="G$1" x="129.54" y="-10.16" rot="R270"/>
 <instance part="C20" gate="G$1" x="139.7" y="7.62">
@@ -10057,8 +10085,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="ANT1" gate="A" x="180.34" y="10.16" rot="R270"/>
 <instance part="ANT2" gate="A" x="180.34" y="0" rot="R270"/>
 <instance part="ANT3" gate="A" x="180.34" y="-10.16" rot="R270"/>
-<instance part="R6" gate="G$1" x="139.7" y="20.32" rot="R90"/>
-<instance part="R7" gate="G$1" x="139.7" y="-17.78" rot="R90"/>
+<instance part="R6" gate="G$1" x="139.7" y="20.32" rot="R90">
+<attribute name="PROD_ID" x="139.7" y="20.32" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="R7" gate="G$1" x="139.7" y="-17.78" rot="R90">
+<attribute name="PROD_ID" x="139.7" y="-17.78" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
 <instance part="C26" gate="G$1" x="139.7" y="33.02">
 <attribute name="PROD_ID" x="139.7" y="33.02" size="1.778" layer="96" display="off"/>
 </instance>
@@ -10068,7 +10100,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="C28" gate="G$1" x="129.54" y="43.18">
 <attribute name="PROD_ID" x="129.54" y="43.18" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="U$1" gate="G$1" x="91.44" y="76.2">
+<instance part="BAT" gate="G$1" x="91.44" y="76.2">
 <attribute name="PROD_ID" x="91.44" y="76.2" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND10" gate="1" x="91.44" y="66.04"/>
@@ -10240,7 +10272,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="25.4" y="-48.26"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="P$1"/>
+<pinref part="BAT" gate="G$1" pin="P$1"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="91.44" y1="71.12" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
 </segment>
@@ -10347,7 +10379,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="VDD6" gate="G$1" pin="VDD"/>
-<pinref part="U$1" gate="G$1" pin="P$2"/>
+<pinref part="BAT" gate="G$1" pin="P$2"/>
 <wire x1="91.44" y1="86.36" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>

@@ -1954,28 +1954,38 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <element name="C18" library="rcl" package="C0603K" value="1 uF" x="35.56" y="20.955">
 <attribute name="PROD_ID" value="311-1443-1-ND" x="91.44" y="-60.325" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R1" library="rcl" package="R0603" value="56" x="33.655" y="40.64" rot="R90"/>
+<element name="R1" library="rcl" package="R0603" value="56" x="33.655" y="40.64" rot="R90">
+<attribute name="PROD_ID" value="P56GCT-ND" x="33.655" y="40.64" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="Q1" library="transistor-small-signal" package="SOT23" value="BSS123" x="36.83" y="39.6875" rot="R90">
 <attribute name="PROD_ID" value="2N7002ET1GOSCT-ND" x="36.83" y="39.6875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="ISP" library="pinhead" package="2X03" value="" x="37.7825" y="2.8575"/>
-<element name="FTDI" library="pinhead" package="1X06" value="" x="50.8" y="2.54"/>
+<element name="ISP" library="pinhead" package="2X03" value="" x="37.7825" y="2.8575">
+<attribute name="PROD_ID" value="952-2121-ND" x="37.7825" y="2.8575" size="1.778" layer="27" display="off"/>
+</element>
+<element name="FTDI" library="pinhead" package="1X06" value="" x="50.8" y="2.54">
+<attribute name="PROD_ID" value="952-2270-ND" x="50.8" y="2.54" size="1.778" layer="27" display="off"/>
+</element>
 <element name="C19" library="rcl" package="C0603K" value="0.1 uF" x="56.1975" y="5.715">
 <attribute name="PROD_ID" value="311-1088-1-ND" x="110.8075" y="-70.485" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R2" library="rcl" package="R0603" value="1K" x="52.3875" y="29.845"/>
-<element name="R3" library="rcl" package="R0603" value="1K" x="52.3875" y="27.6225"/>
-<element name="L2" library="SparkFun-Passives" package="0603" value="" x="54.2925" y="34.6075" rot="R180">
-<attribute name="PROD_ID" value="RES-07859" x="54.2925" y="34.6075" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="R2" library="rcl" package="R0603" value="1K" x="52.3875" y="29.845">
+<attribute name="PROD_ID" value="P1.0KGCT-ND" x="52.3875" y="29.845" size="1.778" layer="27" display="off"/>
 </element>
-<element name="L3" library="SparkFun-Passives" package="0603" value="" x="54.2925" y="32.385" rot="R180">
-<attribute name="PROD_ID" value="RES-07859" x="54.2925" y="32.385" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="R3" library="rcl" package="R0603" value="1K" x="52.3875" y="27.6225">
+<attribute name="PROD_ID" value="P1.0KGCT-ND" x="52.3875" y="27.6225" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C20" library="rcl" package="C0603K" value="" x="56.515" y="34.29" rot="R270">
-<attribute name="PROD_ID" value="" x="-28.575" y="15.24" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="L2" library="SparkFun-Passives" package="0603" value="1.2 uH" x="54.2925" y="34.6075" rot="R180">
+<attribute name="PROD_ID" value="535-12527-1-ND" x="54.2925" y="34.6075" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C21" library="rcl" package="C0603K" value="" x="56.515" y="31.115" rot="R270">
-<attribute name="PROD_ID" value="" x="-28.575" y="8.255" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="L3" library="SparkFun-Passives" package="0603" value="1.2 uH" x="54.2925" y="32.385" rot="R180">
+<attribute name="PROD_ID" value="535-12527-1-ND" x="54.2925" y="32.385" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C20" library="rcl" package="C0603K" value="100 pF" x="56.515" y="34.29" rot="R270">
+<attribute name="PROD_ID" value="311-1069-1-ND" x="-28.575" y="15.24" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="C21" library="rcl" package="C0603K" value="100 pF" x="56.515" y="31.115" rot="R270">
+<attribute name="PROD_ID" value="311-1069-1-ND" x="-28.575" y="8.255" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="C22" library="rcl" package="C0603K" value="56 pF" x="59.055" y="34.29" rot="R270">
 <attribute name="PROD_ID" value="445-1278-1-ND" x="-26.035" y="7.62" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1998,18 +2008,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <element name="ANT1" library="discrete" package="PAD-01" value="" x="62.23" y="29.21"/>
 <element name="ANT2" library="discrete" package="PAD-01" value="" x="64.897" y="24.13"/>
 <element name="ANT3" library="discrete" package="PAD-01" value="" x="62.23" y="19.05"/>
-<element name="R6" library="rcl" package="R0603" value="" x="58.1025" y="37.1475" rot="R180"/>
-<element name="R7" library="rcl" package="R0603" value="" x="54.9275" y="27.94" rot="R90"/>
-<element name="C26" library="rcl" package="C0603K" value="" x="54.9275" y="37.1475">
-<attribute name="PROD_ID" value="" x="96.8375" y="-47.9425" size="1.778" layer="27" display="off"/>
+<element name="R6" library="rcl" package="R0603" value="15 k" x="58.1025" y="37.1475" rot="R180">
+<attribute name="PROD_ID" value="P15KGCT-ND" x="58.1025" y="37.1475" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C27" library="rcl" package="C0603K" value="" x="55.5625" y="25.4" rot="R180">
-<attribute name="PROD_ID" value="" x="9.8425" y="110.49" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="R7" library="rcl" package="R0603" value="15 k" x="54.9275" y="27.94" rot="R90">
+<attribute name="PROD_ID" value="P15KGCT-ND" x="54.9275" y="27.94" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C26" library="rcl" package="C0603K" value="1 nF" x="54.9275" y="37.1475">
+<attribute name="PROD_ID" value="311-1342-1-ND" x="96.8375" y="-47.9425" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C27" library="rcl" package="C0603K" value="1 nF" x="55.5625" y="25.4" rot="R180">
+<attribute name="PROD_ID" value="311-1342-1-ND" x="9.8425" y="110.49" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C28" library="rcl" package="C0603K" value="0.1 uF" x="52.07" y="33.02" rot="R270">
 <attribute name="PROD_ID" value="311-1088-1-ND" x="-33.02" y="-16.51" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U$1" library="battery_holder" package="AAA_X3" value="AAA_X3" x="30.48" y="24.13" rot="MR0">
+<element name="BAT" library="battery_holder" package="AAA_X3" value="AAA_X3" x="30.48" y="24.13" rot="MR0">
 <attribute name="PROD_ID" value="36-2479-ND" x="30.48" y="24.13" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="S1" library="SparkFun-Electromechanical" package="TACTILE_SWITCH_TALL" value="SWITCH-MOMENTARY-2SMD-4" x="71.755" y="8.5725" rot="R180">
@@ -2077,7 +2091,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <contactref element="ISP" pad="6"/>
 <contactref element="FTDI" pad="1"/>
 <contactref element="FTDI" pad="2"/>
-<contactref element="U$1" pad="NEG"/>
+<contactref element="BAT" pad="NEG"/>
 <wire x1="56.43" y1="33.5" x2="56.515" y2="33.415" width="0.3048" layer="1"/>
 <wire x1="56.515" y1="33.415" x2="56.515" y2="31.99" width="1.016" layer="1"/>
 <wire x1="56.515" y1="31.99" x2="57.2275" y2="31.99" width="1.016" layer="1"/>
@@ -2155,7 +2169,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="59.69" y1="24.13" x2="58.7375" y2="23.1775" width="1.016" layer="16"/>
 <wire x1="58.7375" y1="23.1775" x2="56.8325" y2="23.1775" width="1.016" layer="16"/>
 <via x="56.8325" y="23.1775" extent="1-16" drill="0.5"/>
-<wire x1="56.8325" y1="23.1775" x2="56.8325" y2="21.59" width="1.016" layer="1"/>
+<wire x1="56.8325" y1="23.1775" x2="56.8325" y2="21.59" width="0" layer="19" extent="1-16"/>
 <wire x1="59.6125" y1="26.3525" x2="59.69" y2="26.275" width="1.016" layer="1"/>
 <wire x1="59.69" y1="26.275" x2="59.69" y2="24.13" width="1.016" layer="1"/>
 <wire x1="59.6125" y1="26.3525" x2="59.6125" y2="27.46" width="1.016" layer="1"/>
@@ -2218,7 +2232,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <contactref element="LCD" pad="12"/>
 <contactref element="LCD" pad="A"/>
 <contactref element="ISP" pad="2"/>
-<contactref element="U$1" pad="POS"/>
+<contactref element="BAT" pad="POS"/>
 <contactref element="U2" pad="25"/>
 <contactref element="C6" pad="1"/>
 <contactref element="U2" pad="8"/>
