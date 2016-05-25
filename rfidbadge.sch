@@ -9885,35 +9885,39 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="L2" library="SparkFun-Passives" deviceset="INDUCTOR" device="30OHM,1.8A"/>
 <part name="L3" library="SparkFun-Passives" deviceset="INDUCTOR" device="30OHM,1.8A"/>
 <part name="C20" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<attribute name="PROD_ID" value=""/>
 </part>
 <part name="C21" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<attribute name="PROD_ID" value=""/>
 </part>
-<part name="C22" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<part name="C22" library="rcl" deviceset="C-EU" device="C0603K" value="56 pF">
+<attribute name="PROD_ID" value="445-1278-1-ND"/>
 </part>
-<part name="C23" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<part name="C23" library="rcl" deviceset="C-EU" device="C0603K" value="56 pF">
+<attribute name="PROD_ID" value="445-1278-1-ND"/>
 </part>
-<part name="C24" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<part name="C24" library="rcl" deviceset="C-EU" device="C0603K" value="820 pF">
+<attribute name="PROD_ID" value="445-1292-1-ND"/>
 </part>
-<part name="C25" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<part name="C25" library="rcl" deviceset="C-EU" device="C0603K" value="820 pF">
+<attribute name="PROD_ID" value="445-1292-1-ND"/>
 </part>
-<part name="R4" library="rcl" deviceset="R-US_" device="R0603"/>
-<part name="R5" library="rcl" deviceset="R-US_" device="R0603"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="R0603" value="0.39">
+<attribute name="PROD_ID" value="P.39AHCT-ND"/>
+</part>
+<part name="R5" library="rcl" deviceset="R-US_" device="R0603" value="0.39">
+<attribute name="PROD_ID" value="P.39AHCT-ND"/>
+</part>
 <part name="ANT1" library="discrete" deviceset="ANTENNA" device=""/>
 <part name="ANT2" library="discrete" deviceset="ANTENNA" device=""/>
 <part name="ANT3" library="discrete" deviceset="ANTENNA" device=""/>
 <part name="R6" library="rcl" deviceset="R-US_" device="R0603"/>
 <part name="R7" library="rcl" deviceset="R-US_" device="R0603"/>
 <part name="C26" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<attribute name="PROD_ID" value=""/>
 </part>
 <part name="C27" library="rcl" deviceset="C-EU" device="C0603K">
-<attribute name="PROD_ID" value="311-1060-1-ND"/>
+<attribute name="PROD_ID" value=""/>
 </part>
 <part name="C28" library="rcl" deviceset="C-EU" device="C0603K" value="0.1 uF">
 <attribute name="PROD_ID" value="311-1088-1-ND"/>
@@ -10044,8 +10048,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="C25" gate="G$1" x="154.94" y="-5.08">
 <attribute name="PROD_ID" x="154.94" y="-5.08" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="R4" gate="G$1" x="165.1" y="10.16"/>
-<instance part="R5" gate="G$1" x="165.1" y="-10.16"/>
+<instance part="R4" gate="G$1" x="165.1" y="10.16">
+<attribute name="PROD_ID" x="165.1" y="10.16" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="R5" gate="G$1" x="165.1" y="-10.16">
+<attribute name="PROD_ID" x="165.1" y="-10.16" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="ANT1" gate="A" x="180.34" y="10.16" rot="R270"/>
 <instance part="ANT2" gate="A" x="180.34" y="0" rot="R270"/>
 <instance part="ANT3" gate="A" x="180.34" y="-10.16" rot="R270"/>

@@ -1972,35 +1972,39 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="PROD_ID" value="RES-07859" x="54.2925" y="32.385" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C20" library="rcl" package="C0603K" value="" x="56.515" y="34.29" rot="R270">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="-28.575" y="15.24" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="" x="-28.575" y="15.24" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="C21" library="rcl" package="C0603K" value="" x="56.515" y="31.115" rot="R270">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="-28.575" y="8.255" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PROD_ID" value="" x="-28.575" y="8.255" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C22" library="rcl" package="C0603K" value="" x="59.055" y="34.29" rot="R270">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="-26.035" y="7.62" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C22" library="rcl" package="C0603K" value="56 pF" x="59.055" y="34.29" rot="R270">
+<attribute name="PROD_ID" value="445-1278-1-ND" x="-26.035" y="7.62" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C23" library="rcl" package="C0603K" value="" x="56.515" y="27.94" rot="R270">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="-28.575" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C23" library="rcl" package="C0603K" value="56 pF" x="56.515" y="27.94" rot="R270">
+<attribute name="PROD_ID" value="445-1278-1-ND" x="-28.575" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C24" library="rcl" package="C0603K" value="" x="59.055" y="28.8925" rot="R270">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="-26.035" y="-5.3975" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="C24" library="rcl" package="C0603K" value="820 pF" x="59.055" y="28.8925" rot="R270">
+<attribute name="PROD_ID" value="445-1292-1-ND" x="-26.035" y="-5.3975" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C25" library="rcl" package="C0603K" value="" x="58.7375" y="26.3525" rot="R180">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="20.6375" y="111.4425" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="C25" library="rcl" package="C0603K" value="820 pF" x="58.7375" y="26.3525" rot="R180">
+<attribute name="PROD_ID" value="445-1292-1-ND" x="20.6375" y="111.4425" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R4" library="rcl" package="R0603" value="" x="60.0075" y="31.4325"/>
-<element name="R5" library="rcl" package="R0603" value="" x="60.0075" y="21.59"/>
+<element name="R4" library="rcl" package="R0603" value="0.39" x="60.0075" y="31.4325">
+<attribute name="PROD_ID" value="P.39AHCT-ND" x="60.0075" y="31.4325" size="1.778" layer="27" display="off"/>
+</element>
+<element name="R5" library="rcl" package="R0603" value="0.39" x="60.0075" y="21.59">
+<attribute name="PROD_ID" value="P.39AHCT-ND" x="60.0075" y="21.59" size="1.778" layer="27" display="off"/>
+</element>
 <element name="ANT1" library="discrete" package="PAD-01" value="" x="62.23" y="29.21"/>
 <element name="ANT2" library="discrete" package="PAD-01" value="" x="64.897" y="24.13"/>
 <element name="ANT3" library="discrete" package="PAD-01" value="" x="62.23" y="19.05"/>
 <element name="R6" library="rcl" package="R0603" value="" x="58.1025" y="37.1475" rot="R180"/>
 <element name="R7" library="rcl" package="R0603" value="" x="54.9275" y="27.94" rot="R90"/>
 <element name="C26" library="rcl" package="C0603K" value="" x="54.9275" y="37.1475">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="96.8375" y="-47.9425" size="1.778" layer="27" display="off"/>
+<attribute name="PROD_ID" value="" x="96.8375" y="-47.9425" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C27" library="rcl" package="C0603K" value="" x="55.5625" y="25.4" rot="R180">
-<attribute name="PROD_ID" value="311-1060-1-ND" x="9.8425" y="110.49" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PROD_ID" value="" x="9.8425" y="110.49" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C28" library="rcl" package="C0603K" value="0.1 uF" x="52.07" y="33.02" rot="R270">
 <attribute name="PROD_ID" value="311-1088-1-ND" x="-33.02" y="-16.51" size="1.778" layer="27" rot="R270" display="off"/>
