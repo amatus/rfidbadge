@@ -9945,8 +9945,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="VDD6" library="supply1" deviceset="VDD" device=""/>
-<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4"/>
-<part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4"/>
+<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4">
+<attribute name="PROD_ID" value="CKN9112CT-ND"/>
+</part>
+<part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4">
+<attribute name="PROD_ID" value="CKN9112CT-ND"/>
+</part>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="TP1" library="testpad" deviceset="TP" device="TP06R" value="TPTP06R"/>
 <part name="TP2" library="testpad" deviceset="TP" device="TP06R" value="TPTP06R"/>

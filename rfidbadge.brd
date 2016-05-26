@@ -2027,10 +2027,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="PROD_ID" value="36-2479-ND" x="30.48" y="24.13" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="S1" library="SparkFun-Electromechanical" package="TACTILE_SWITCH_TALL" value="SWITCH-MOMENTARY-2SMD-4" x="71.755" y="8.5725" rot="R180">
-<attribute name="PROD_ID" value="SWCH-11966" x="71.755" y="8.5725" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PROD_ID" value="CKN9112CT-ND" x="71.755" y="8.5725" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="S2" library="SparkFun-Electromechanical" package="TACTILE_SWITCH_TALL" value="SWITCH-MOMENTARY-2SMD-4" x="71.755" y="40.005" rot="R180">
-<attribute name="PROD_ID" value="SWCH-11966" x="71.755" y="40.005" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PROD_ID" value="CKN9112CT-ND" x="71.755" y="40.005" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="TP1" library="testpad" package="TP06R" value="TPTP06R" x="44.45" y="27.305" smashed="yes">
 <attribute name="TP_SIGNAL_NAME" value="" x="44.45" y="25.4" size="1" layer="37"/>
