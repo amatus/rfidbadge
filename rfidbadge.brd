@@ -2169,7 +2169,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="59.69" y1="24.13" x2="58.7375" y2="23.1775" width="1.016" layer="16"/>
 <wire x1="58.7375" y1="23.1775" x2="56.8325" y2="23.1775" width="1.016" layer="16"/>
 <via x="56.8325" y="23.1775" extent="1-16" drill="0.5"/>
-<wire x1="56.8325" y1="23.1775" x2="56.8325" y2="21.59" width="0" layer="19" extent="1-16"/>
 <wire x1="59.6125" y1="26.3525" x2="59.69" y2="26.275" width="1.016" layer="1"/>
 <wire x1="59.69" y1="26.275" x2="59.69" y2="24.13" width="1.016" layer="1"/>
 <wire x1="59.6125" y1="26.3525" x2="59.6125" y2="27.46" width="1.016" layer="1"/>
@@ -2179,7 +2178,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <via x="59.3725" y="39.0525" extent="1-16" drill="0.5"/>
 <wire x1="67.945" y1="8.5725" x2="59.3725" y2="8.5725" width="0.3048" layer="16"/>
 <via x="59.3725" y="8.5725" extent="1-16" drill="0.5"/>
-<wire x1="42.650015625" y1="12.874328125" x2="36.435" y2="12.065" width="0" layer="19" extent="1-1"/>
+<via x="20.955" y="24.13" extent="1-16" drill="0.5"/>
+<wire x1="20.955" y1="24.13" x2="17.78" y2="24.13" width="0.8128" layer="16"/>
+<via x="17.78" y="24.13" extent="1-16" drill="0.5"/>
 </signal>
 <signal name="EXTCLK">
 <contactref element="U1" pad="7"/>
