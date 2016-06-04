@@ -1,7 +1,7 @@
 #include <Wire.h>
-#include "CLRC633.h"
+#include "CLRC663.h"
 
-Clrc633 rc633 = Clrc633();
+Clrc663 rc663 = Clrc663();
 
 void setup()
 {
@@ -12,8 +12,10 @@ void setup()
 void loop()
 {
   Serial.print("PLL_Ctrl = ");
-  Serial.println(rc633.read_reg(PLL_CTRL), HEX);
+  Serial.println(rc663.read_reg(PLL_CTRL), HEX);
   Serial.print("PLL_DivOut = ");
-  Serial.println(rc633.read_reg(PLL_DIVOUT), HEX);
+  Serial.println(rc663.read_reg(PLL_DIVOUT), HEX);
   /* while(true) */ delay(1000);
 }
+
+/* vim: set expandtab ts=2 sw=2: */

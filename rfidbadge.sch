@@ -319,7 +319,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="CLRC633">
+<library name="CLRC663">
 <packages>
 <package name="QFN32">
 <description>32-pin QFN package</description>
@@ -9793,7 +9793,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U1" library="SparkFun-DigitalIC" deviceset="ATMEGA328P_TQFP" device="" value="ATMEGA328P_TQFP">
 <attribute name="PROD_ID" value="ATMEGA328PB-AURCT-ND"/>
 </part>
-<part name="U2" library="CLRC633" deviceset="CLRC663" device="">
+<part name="U2" library="CLRC663" deviceset="CLRC663" device="">
 <attribute name="PROD_ID" value="568-11528-ND"/>
 </part>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>

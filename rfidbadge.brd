@@ -251,7 +251,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
-<library name="CLRC633">
+<library name="CLRC663">
 <packages>
 <package name="QFN32">
 <description>32-pin QFN package</description>
@@ -1890,7 +1890,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <element name="U1" library="SparkFun-DigitalIC" package="TQFP32-08" value="ATMEGA328P_TQFP" x="45.4025" y="16.1925" rot="R225">
 <attribute name="PROD_ID" value="ATMEGA328PB-AURCT-ND" x="-30.03165" y="5.41619375" size="1.778" layer="27" rot="R225" display="off"/>
 </element>
-<element name="U2" library="CLRC633" package="QFN32" value="CLRC663" x="46.99" y="31.75" rot="R90">
+<element name="U2" library="CLRC663" package="QFN32" value="CLRC663" x="46.99" y="31.75" rot="R90">
 <attribute name="PROD_ID" value="568-11528-ND" x="116.84" y="57.15" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="Y1" library="SparkFun-FreqCtrl" package="CRYSTAL-SMD-5X3" value="27.12 MHz" x="45.72" y="38.1">

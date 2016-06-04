@@ -1,11 +1,11 @@
 #include <Wire.h>
-#include "CLRC633.h"
+#include "CLRC663.h"
 
-Clrc633::Clrc633(uint8_t address) : addr(address)
+Clrc663::Clrc663(uint8_t address) : addr(address)
 {
 }
 
-uint8_t Clrc633::read_reg(uint8_t reg)
+uint8_t Clrc663::read_reg(uint8_t reg)
 {
   Wire.beginTransmission(addr);
   Wire.write(reg);
@@ -14,7 +14,7 @@ uint8_t Clrc633::read_reg(uint8_t reg)
   return Wire.read();
 }
 
-void Clrc633::write_reg(uint8_t reg, uint8_t val)
+void Clrc663::write_reg(uint8_t reg, uint8_t val)
 {
   Wire.beginTransmission(addr);
   Wire.write(reg);
