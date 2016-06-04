@@ -7,15 +7,22 @@ void setup()
 {
   Serial.begin(9600);
   Wire.begin();
+  rc663.iso_14443A_init();
 }
 
 void loop()
 {
-  Serial.print("PLL_Ctrl = ");
-  Serial.println(rc663.read_reg(PLL_CTRL), HEX);
-  Serial.print("PLL_DivOut = ");
-  Serial.println(rc663.read_reg(PLL_DIVOUT), HEX);
-  /* while(true) */ delay(1000);
+  rc663.transmit_enable(true);
+  uint8_t atqa[2];
+  int rc = rc663.iso_14443A_reqa(atqa);
+  rc663.transmit_enable(false);
+  Serial.print("rc = ");
+  Serial.println(rc);
+  Serial.print("atqa = ");
+  Serial.print(atqa[0], HEX);
+  Serial.print(", ");
+  Serial.println(atqa[1], HEX);
+  delay(1000);
 }
 
 /* vim: set expandtab ts=2 sw=2: */
