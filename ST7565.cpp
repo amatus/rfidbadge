@@ -41,7 +41,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include "ST7565.h"
 
-#define ST7565_STARTBYTES 1
+#define ST7565_STARTBYTES 0
 
 uint8_t is_reversed = 0;
 
