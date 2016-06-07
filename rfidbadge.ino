@@ -10,7 +10,8 @@ void setup()
 {
   pinMode(LED, OUTPUT);
   Serial.begin(9600);
-  lcd.begin(0x18);
+  lcd.begin(0x08);
+  lcd.clear();
   lcd.drawstring(0, 0, "Scanning...");
   lcd.display();
   Wire.begin();

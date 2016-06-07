@@ -52,7 +52,7 @@ const uint8_t pagemap[] = { 3, 2, 1, 0, 7, 6, 5, 4 };
 const extern uint8_t PROGMEM font[];
 
 // the memory buffer for the LCD
-uint8_t st7565_buffer[1024] = { 0, };
+uint8_t st7565_buffer[1024];
 
 // reduces how much is refreshed, which speeds it up!
 // originally derived from Steve Evans/JCW's mod but cleaned up and
