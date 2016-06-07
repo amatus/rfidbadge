@@ -52,7 +52,7 @@ const uint8_t pagemap[] = { 3, 2, 1, 0, 7, 6, 5, 4 };
 const extern uint8_t PROGMEM font[];
 
 // the memory buffer for the LCD
-uint8_t st7565_buffer[1024];
+uint8_t st7565_buffer[512];
 
 // reduces how much is refreshed, which speeds it up!
 // originally derived from Steve Evans/JCW's mod but cleaned up and
@@ -545,7 +545,7 @@ void ST7565::display(void) {
 
 // clear everything
 void ST7565::clear(void) {
-  memset(st7565_buffer, 0, 1024);
+  memset(st7565_buffer, 0, sizeof(st7565_buffer));
   updateBoundingBox(0, 0, LCDWIDTH-1, LCDHEIGHT-1);
 }
 
