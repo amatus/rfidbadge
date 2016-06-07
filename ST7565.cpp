@@ -45,9 +45,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 uint8_t is_reversed = 0;
 
-// a handy reference to where the pages are on the screen
-const uint8_t pagemap[] = { 3, 2, 1, 0, 7, 6, 5, 4 };
-
 // a 5x7 font table
 const extern uint8_t PROGMEM font[];
 
@@ -496,7 +493,7 @@ void ST7565::display(void) {
   Serial.print(", "); Serial.print(yUpdateMax, DEC); Serial.println(")");
   */
 
-  for(p = 0; p < 8; p++) {
+  for(p = 0; p < 4; p++) {
     /*
       putstring("new page! ");
       uart_putw_dec(p);
@@ -512,8 +509,7 @@ void ST7565::display(void) {
     }
 #endif
 
-    st7565_command(CMD_SET_PAGE | pagemap[p]);
-
+    st7565_command(CMD_SET_PAGE | (3 - p));
 
 #ifdef enablePartialUpdate
     col = xUpdateMin;
@@ -526,7 +522,6 @@ void ST7565::display(void) {
 
     st7565_command(CMD_SET_COLUMN_LOWER | ((col+ST7565_STARTBYTES) & 0xf));
     st7565_command(CMD_SET_COLUMN_UPPER | (((col+ST7565_STARTBYTES) >> 4) & 0x0F));
-    st7565_command(CMD_RMW);
     
     for(; col <= maxcol; col++) {
       //uart_putw_dec(col);
