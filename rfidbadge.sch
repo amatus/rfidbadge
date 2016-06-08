@@ -9945,10 +9945,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="VDD6" library="supply1" deviceset="VDD" device=""/>
-<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4">
+<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4" value="MENU">
 <attribute name="PROD_ID" value="CKN9112CT-ND"/>
 </part>
-<part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4">
+<part name="S2" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4" value="SELECT">
 <attribute name="PROD_ID" value="CKN9112CT-ND"/>
 </part>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
@@ -9958,6 +9958,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP4" library="testpad" deviceset="TP" device="TP06R" value="TPTP06R"/>
 <part name="TP5" library="testpad" deviceset="TP" device="TP06R" value="TPTP06R"/>
 <part name="TP6" library="testpad" deviceset="TP" device="TP06R" value="TPTP06R"/>
+<part name="S3" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-1101NE" value="RESET">
+<attribute name="PROD_ID" value="CKN10388CT-ND"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -10118,6 +10121,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="TP4" gate="G$1" x="63.5" y="25.4" rot="R90"/>
 <instance part="TP5" gate="G$1" x="63.5" y="22.86" rot="R90"/>
 <instance part="TP6" gate="G$1" x="63.5" y="20.32" rot="R90"/>
+<instance part="S3" gate="G$1" x="157.48" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -10294,6 +10298,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="165.1" y1="71.12" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="71.12" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
 <junction x="165.1" y="71.12"/>
+<pinref part="S3" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="91.44" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
+<junction x="165.1" y="81.28"/>
 </segment>
 </net>
 <net name="EXTCLK" class="0">
@@ -10589,6 +10597,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="C19" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="-48.26" x2="7.62" y2="-45.72" width="0.1524" layer="91"/>
 <label x="7.62" y="-45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="S3" gate="G$1" pin="1"/>
+<wire x1="152.4" y1="91.44" x2="149.86" y2="91.44" width="0.1524" layer="91"/>
+<label x="149.86" y="91.44" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="CS" class="0">
