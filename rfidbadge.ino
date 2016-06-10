@@ -2,13 +2,17 @@
 #include "CLRC663.h"
 #include "ST7565.h"
 
-#define LED  (8)
+#define LED    (8)
+#define MENU   (3)
+#define SELECT (4)
 Clrc663 rc663 = Clrc663();
 ST7565 lcd = ST7565(11, 13, 9, 12, 10);
 
 void setup()
 {
   pinMode(LED, OUTPUT);
+  pinMode(MENU, INPUT_PULLUP);
+  pinMode(SELECT, INPUT_PULLUP);
   Serial.begin(9600);
   lcd.begin(0x08);
   lcd.clear();
@@ -41,6 +45,13 @@ void loop()
     digitalWrite(LED, LOW);
     lcd.drawstring(0, 1, "  ");
     lcd.drawstring(0, 2, "  ");
+  }
+  if (digitalRead(MENU) == LOW) {
+    lcd.drawstring(0, 3, "MENU  ");
+  } else if (digitalRead(SELECT) == LOW) {
+    lcd.drawstring(0, 3, "SELECT");
+  } else {
+    lcd.drawstring(0, 3, "      ");
   }
   lcd.display();
   delay(1000);
