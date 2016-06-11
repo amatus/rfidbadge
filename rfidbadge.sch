@@ -9780,6 +9780,181 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="artwork">
+<packages>
+<package name="DC24LOGO">
+<polygon width="0" layer="51">
+<vertex x="6.7945" y="-1.94818125"/>
+<vertex x="6.7945" y="-6.3119"/>
+<vertex x="7.680959375" y="-6.3119"/>
+<vertex x="7.680959375" y="-3.28421875"/>
+<vertex x="10.3378" y="-6.3119"/>
+<vertex x="11.224259375" y="-6.3119"/>
+<vertex x="11.224259375" y="-1.94818125"/>
+<vertex x="10.3378" y="-1.94818125"/>
+<vertex x="10.3378" y="-5.03681875"/>
+<vertex x="7.70128125" y="-1.9685"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-1.25221875" y="-6.3119"/>
+<vertex x="-1.25221875" y="-5.471159375"/>
+<vertex x="-1.2954" y="-5.471159375"/>
+<vertex x="-1.2954" y="-2.834640625"/>
+<vertex x="-1.25221875" y="-2.834640625"/>
+<vertex x="-1.25221875" y="-1.94818125"/>
+<vertex x="-2.181859375" y="-1.94818125"/>
+<vertex x="-2.181859375" y="-6.3119"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-1.25221875" y="-6.3119"/>
+<vertex x="2.245359375" y="-6.3119"/>
+<vertex x="2.245359375" y="-1.94818125"/>
+<vertex x="-1.25221875" y="-1.94818125"/>
+<vertex x="-1.25221875" y="-2.834640625"/>
+<vertex x="1.44271875" y="-2.834640625"/>
+<vertex x="1.44271875" y="-5.471159375"/>
+<vertex x="-1.25221875" y="-5.471159375"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-11.262359375" y="-1.94818125"/>
+<vertex x="-11.262359375" y="-6.3119"/>
+<vertex x="-6.670040625" y="-6.3119"/>
+<vertex x="-6.670040625" y="-5.46861875"/>
+<vertex x="-10.335259375" y="-5.46861875"/>
+<vertex x="-10.335259375" y="-2.8321"/>
+<vertex x="-6.670040625" y="-2.8321"/>
+<vertex x="-6.670040625" y="-1.9685"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="5.68198125" y="1.75768125"/>
+<vertex x="5.68198125" y="0.975359375"/>
+<vertex x="5.78611875" y="0.975359375"/>
+<vertex x="5.78611875" y="-1.14808125"/>
+<vertex x="5.68198125" y="-1.14808125"/>
+<vertex x="5.68198125" y="-1.95071875"/>
+<vertex x="6.77418125" y="-1.95071875"/>
+<vertex x="6.77418125" y="1.75768125"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="5.68198125" y="1.75768125"/>
+<vertex x="2.308859375" y="1.75768125"/>
+<vertex x="2.308859375" y="-1.95071875"/>
+<vertex x="5.68198125" y="-1.95071875"/>
+<vertex x="5.68198125" y="-1.14808125"/>
+<vertex x="5.267959375" y="-1.14808125"/>
+<vertex x="5.267959375" y="-0.32258125"/>
+<vertex x="3.2512" y="-0.32258125"/>
+<vertex x="3.2512" y="0.955040625"/>
+<vertex x="3.807459375" y="0.975359375"/>
+<vertex x="3.807459375" y="0.129540625"/>
+<vertex x="5.247640625" y="0.129540625"/>
+<vertex x="5.247640625" y="0.975359375"/>
+<vertex x="5.679440625" y="0.975359375"/>
+<vertex x="5.679440625" y="1.75768125"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-6.64718125" y="0.95758125"/>
+<vertex x="-5.68198125" y="0.95758125"/>
+<vertex x="-5.68198125" y="0.99821875"/>
+<vertex x="-3.16991875" y="0.99821875"/>
+<vertex x="-3.16991875" y="0.95758125"/>
+<vertex x="-2.20218125" y="0.95758125"/>
+<vertex x="-2.20218125" y="1.82371875"/>
+<vertex x="-6.64718125" y="1.844040625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-6.64718125" y="0.95758125"/>
+<vertex x="-6.64718125" y="-1.94818125"/>
+<vertex x="-2.20218125" y="-1.94818125"/>
+<vertex x="-2.20218125" y="0.95758125"/>
+<vertex x="-3.16991875" y="0.95758125"/>
+<vertex x="-3.16991875" y="-0.281940625"/>
+<vertex x="-5.146040625" y="-0.281940625"/>
+<vertex x="-5.146040625" y="-0.69088125"/>
+<vertex x="-3.16991875" y="-0.69088125"/>
+<vertex x="-3.16991875" y="-1.1049"/>
+<vertex x="-5.661659375" y="-1.1049"/>
+<vertex x="-5.661659375" y="0.10921875"/>
+<vertex x="-3.685540625" y="0.10921875"/>
+<vertex x="-3.685540625" y="0.581659375"/>
+<vertex x="-5.68198125" y="0.581659375"/>
+<vertex x="-5.68198125" y="0.955040625"/>
+<vertex x="-6.64718125" y="0.955040625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="6.7945" y="6.309359375"/>
+<vertex x="6.7945" y="1.800859375"/>
+<vertex x="7.6581" y="1.800859375"/>
+<vertex x="7.6581" y="3.591559375"/>
+<vertex x="11.262359375" y="3.591559375"/>
+<vertex x="11.262359375" y="4.47801875"/>
+<vertex x="7.6581" y="4.47801875"/>
+<vertex x="7.6581" y="5.425440625"/>
+<vertex x="11.2395" y="5.425440625"/>
+<vertex x="11.2395" y="6.3119"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-0.84328125" y="4.455159375"/>
+<vertex x="2.286" y="4.455159375"/>
+<vertex x="2.286" y="3.61188125"/>
+<vertex x="-0.84328125" y="3.61188125"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-2.20218125" y="6.289040625"/>
+<vertex x="-2.20218125" y="1.8415"/>
+<vertex x="2.245359375" y="1.8415"/>
+<vertex x="2.245359375" y="2.68478125"/>
+<vertex x="-1.31571875" y="2.68478125"/>
+<vertex x="-1.31571875" y="5.40258125"/>
+<vertex x="2.245359375" y="5.40258125"/>
+<vertex x="2.245359375" y="6.289040625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-8.016240625" y="1.831340625"/>
+<vertex x="-8.016240625" y="2.69748125"/>
+<vertex x="-10.29208125" y="2.69748125"/>
+<vertex x="-10.29208125" y="5.40511875"/>
+<vertex x="-8.049259375" y="5.40511875"/>
+<vertex x="-8.016240625" y="5.3721"/>
+<vertex x="-8.016240625" y="6.26871875"/>
+<vertex x="-11.15568125" y="6.26871875"/>
+<vertex x="-11.15568125" y="1.831340625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-8.016240625" y="1.831340625"/>
+<vertex x="-7.566659375" y="1.831340625"/>
+<vertex x="-6.708140625" y="2.68478125"/>
+<vertex x="-6.708140625" y="5.40511875"/>
+<vertex x="-7.57428125" y="6.271259375"/>
+<vertex x="-8.0137" y="6.271259375"/>
+<vertex x="-8.0137" y="5.374640625"/>
+<vertex x="-7.57428125" y="4.93521875"/>
+<vertex x="-7.57428125" y="3.14198125"/>
+<vertex x="-8.0137" y="2.702559375"/>
+<vertex x="-8.0137" y="1.83641875"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="DC24LOGO">
+<text x="0" y="0" size="1.27" layer="94">DEF CON 24 Logo</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DC24LOGO">
+<gates>
+<gate name="G$1" symbol="DC24LOGO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DC24LOGO">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9961,6 +10136,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="S3" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-1101NE" value="RESET">
 <attribute name="PROD_ID" value="CKN10388CT-ND"/>
 </part>
+<part name="U$1" library="artwork" deviceset="DC24LOGO" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10122,6 +10298,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="TP5" gate="G$1" x="63.5" y="22.86" rot="R90"/>
 <instance part="TP6" gate="G$1" x="63.5" y="20.32" rot="R90"/>
 <instance part="S3" gate="G$1" x="157.48" y="91.44"/>
+<instance part="U$1" gate="G$1" x="154.94" y="-58.42"/>
 </instances>
 <busses>
 </busses>

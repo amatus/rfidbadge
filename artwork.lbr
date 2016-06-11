@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<packages>
+<package name="DC24LOGO">
+<polygon width="0" layer="51">
+<vertex x="6.7945" y="-1.94818125"/>
+<vertex x="6.7945" y="-6.3119"/>
+<vertex x="7.680959375" y="-6.3119"/>
+<vertex x="7.680959375" y="-3.28421875"/>
+<vertex x="10.3378" y="-6.3119"/>
+<vertex x="11.224259375" y="-6.3119"/>
+<vertex x="11.224259375" y="-1.94818125"/>
+<vertex x="10.3378" y="-1.94818125"/>
+<vertex x="10.3378" y="-5.03681875"/>
+<vertex x="7.70128125" y="-1.9685"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-1.25221875" y="-6.3119"/>
+<vertex x="-1.25221875" y="-5.471159375"/>
+<vertex x="-1.2954" y="-5.471159375"/>
+<vertex x="-1.2954" y="-2.834640625"/>
+<vertex x="-1.25221875" y="-2.834640625"/>
+<vertex x="-1.25221875" y="-1.94818125"/>
+<vertex x="-2.181859375" y="-1.94818125"/>
+<vertex x="-2.181859375" y="-6.3119"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-1.25221875" y="-6.3119"/>
+<vertex x="2.245359375" y="-6.3119"/>
+<vertex x="2.245359375" y="-1.94818125"/>
+<vertex x="-1.25221875" y="-1.94818125"/>
+<vertex x="-1.25221875" y="-2.834640625"/>
+<vertex x="1.44271875" y="-2.834640625"/>
+<vertex x="1.44271875" y="-5.471159375"/>
+<vertex x="-1.25221875" y="-5.471159375"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-11.262359375" y="-1.94818125"/>
+<vertex x="-11.262359375" y="-6.3119"/>
+<vertex x="-6.670040625" y="-6.3119"/>
+<vertex x="-6.670040625" y="-5.46861875"/>
+<vertex x="-10.335259375" y="-5.46861875"/>
+<vertex x="-10.335259375" y="-2.8321"/>
+<vertex x="-6.670040625" y="-2.8321"/>
+<vertex x="-6.670040625" y="-1.9685"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="5.68198125" y="1.75768125"/>
+<vertex x="5.68198125" y="0.975359375"/>
+<vertex x="5.78611875" y="0.975359375"/>
+<vertex x="5.78611875" y="-1.14808125"/>
+<vertex x="5.68198125" y="-1.14808125"/>
+<vertex x="5.68198125" y="-1.95071875"/>
+<vertex x="6.77418125" y="-1.95071875"/>
+<vertex x="6.77418125" y="1.75768125"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="5.68198125" y="1.75768125"/>
+<vertex x="2.308859375" y="1.75768125"/>
+<vertex x="2.308859375" y="-1.95071875"/>
+<vertex x="5.68198125" y="-1.95071875"/>
+<vertex x="5.68198125" y="-1.14808125"/>
+<vertex x="5.267959375" y="-1.14808125"/>
+<vertex x="5.267959375" y="-0.32258125"/>
+<vertex x="3.2512" y="-0.32258125"/>
+<vertex x="3.2512" y="0.955040625"/>
+<vertex x="3.807459375" y="0.975359375"/>
+<vertex x="3.807459375" y="0.129540625"/>
+<vertex x="5.247640625" y="0.129540625"/>
+<vertex x="5.247640625" y="0.975359375"/>
+<vertex x="5.679440625" y="0.975359375"/>
+<vertex x="5.679440625" y="1.75768125"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-6.64718125" y="0.95758125"/>
+<vertex x="-5.68198125" y="0.95758125"/>
+<vertex x="-5.68198125" y="0.99821875"/>
+<vertex x="-3.16991875" y="0.99821875"/>
+<vertex x="-3.16991875" y="0.95758125"/>
+<vertex x="-2.20218125" y="0.95758125"/>
+<vertex x="-2.20218125" y="1.82371875"/>
+<vertex x="-6.64718125" y="1.844040625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-6.64718125" y="0.95758125"/>
+<vertex x="-6.64718125" y="-1.94818125"/>
+<vertex x="-2.20218125" y="-1.94818125"/>
+<vertex x="-2.20218125" y="0.95758125"/>
+<vertex x="-3.16991875" y="0.95758125"/>
+<vertex x="-3.16991875" y="-0.281940625"/>
+<vertex x="-5.146040625" y="-0.281940625"/>
+<vertex x="-5.146040625" y="-0.69088125"/>
+<vertex x="-3.16991875" y="-0.69088125"/>
+<vertex x="-3.16991875" y="-1.1049"/>
+<vertex x="-5.661659375" y="-1.1049"/>
+<vertex x="-5.661659375" y="0.10921875"/>
+<vertex x="-3.685540625" y="0.10921875"/>
+<vertex x="-3.685540625" y="0.581659375"/>
+<vertex x="-5.68198125" y="0.581659375"/>
+<vertex x="-5.68198125" y="0.955040625"/>
+<vertex x="-6.64718125" y="0.955040625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="6.7945" y="6.309359375"/>
+<vertex x="6.7945" y="1.800859375"/>
+<vertex x="7.6581" y="1.800859375"/>
+<vertex x="7.6581" y="3.591559375"/>
+<vertex x="11.262359375" y="3.591559375"/>
+<vertex x="11.262359375" y="4.47801875"/>
+<vertex x="7.6581" y="4.47801875"/>
+<vertex x="7.6581" y="5.425440625"/>
+<vertex x="11.2395" y="5.425440625"/>
+<vertex x="11.2395" y="6.3119"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-0.84328125" y="4.455159375"/>
+<vertex x="2.286" y="4.455159375"/>
+<vertex x="2.286" y="3.61188125"/>
+<vertex x="-0.84328125" y="3.61188125"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-2.20218125" y="6.289040625"/>
+<vertex x="-2.20218125" y="1.8415"/>
+<vertex x="2.245359375" y="1.8415"/>
+<vertex x="2.245359375" y="2.68478125"/>
+<vertex x="-1.31571875" y="2.68478125"/>
+<vertex x="-1.31571875" y="5.40258125"/>
+<vertex x="2.245359375" y="5.40258125"/>
+<vertex x="2.245359375" y="6.289040625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-8.016240625" y="1.831340625"/>
+<vertex x="-8.016240625" y="2.69748125"/>
+<vertex x="-10.29208125" y="2.69748125"/>
+<vertex x="-10.29208125" y="5.40511875"/>
+<vertex x="-8.049259375" y="5.40511875"/>
+<vertex x="-8.016240625" y="5.3721"/>
+<vertex x="-8.016240625" y="6.26871875"/>
+<vertex x="-11.15568125" y="6.26871875"/>
+<vertex x="-11.15568125" y="1.831340625"/>
+</polygon>
+<polygon width="0" layer="51">
+<vertex x="-8.016240625" y="1.831340625"/>
+<vertex x="-7.566659375" y="1.831340625"/>
+<vertex x="-6.708140625" y="2.68478125"/>
+<vertex x="-6.708140625" y="5.40511875"/>
+<vertex x="-7.57428125" y="6.271259375"/>
+<vertex x="-8.0137" y="6.271259375"/>
+<vertex x="-8.0137" y="5.374640625"/>
+<vertex x="-7.57428125" y="4.93521875"/>
+<vertex x="-7.57428125" y="3.14198125"/>
+<vertex x="-8.0137" y="2.702559375"/>
+<vertex x="-8.0137" y="1.83641875"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="DC24LOGO">
+<text x="0" y="0" size="1.27" layer="94">DEF CON 24 Logo</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DC24LOGO">
+<gates>
+<gate name="G$1" symbol="DC24LOGO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DC24LOGO">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>
