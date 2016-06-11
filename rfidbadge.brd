@@ -163,8 +163,8 @@
 <vertex x="60.325" y="20.32"/>
 </polygon>
 <rectangle x1="33.02" y1="39.37" x2="34.29" y2="41.91" layer="41"/>
-<text x="78.74" y="5.08" size="1.778" layer="25" rot="R90">MENU</text>
-<text x="78.74" y="35.2425" size="1.778" layer="25" rot="R90">SELECT</text>
+<text x="78.74" y="5.08" size="1.778" layer="27" rot="R90">MENU</text>
+<text x="78.74" y="35.2425" size="1.778" layer="27" rot="R90">SELECT</text>
 <text x="66.9925" y="7.9375" size="1.016" layer="25" rot="R90">S1</text>
 <text x="66.9925" y="39.37" size="1.016" layer="25" rot="R90">S2</text>
 <text x="33.02" y="1.27" size="1.27" layer="16" font="vector" rot="MR0">RFID Badge v1 by amatus</text>
