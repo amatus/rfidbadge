@@ -9783,7 +9783,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <library name="artwork">
 <packages>
 <package name="DC24LOGO">
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="6.7945" y="-1.94818125"/>
 <vertex x="6.7945" y="-6.3119"/>
 <vertex x="7.680959375" y="-6.3119"/>
@@ -9795,7 +9795,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="10.3378" y="-5.03681875"/>
 <vertex x="7.70128125" y="-1.9685"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-1.25221875" y="-6.3119"/>
 <vertex x="-1.25221875" y="-5.471159375"/>
 <vertex x="-1.2954" y="-5.471159375"/>
@@ -9805,7 +9805,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="-2.181859375" y="-1.94818125"/>
 <vertex x="-2.181859375" y="-6.3119"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-1.25221875" y="-6.3119"/>
 <vertex x="2.245359375" y="-6.3119"/>
 <vertex x="2.245359375" y="-1.94818125"/>
@@ -9815,7 +9815,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="1.44271875" y="-5.471159375"/>
 <vertex x="-1.25221875" y="-5.471159375"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-11.262359375" y="-1.94818125"/>
 <vertex x="-11.262359375" y="-6.3119"/>
 <vertex x="-6.670040625" y="-6.3119"/>
@@ -9825,7 +9825,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="-6.670040625" y="-2.8321"/>
 <vertex x="-6.670040625" y="-1.9685"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="5.68198125" y="1.75768125"/>
 <vertex x="5.68198125" y="0.975359375"/>
 <vertex x="5.78611875" y="0.975359375"/>
@@ -9835,7 +9835,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="6.77418125" y="-1.95071875"/>
 <vertex x="6.77418125" y="1.75768125"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="5.68198125" y="1.75768125"/>
 <vertex x="2.308859375" y="1.75768125"/>
 <vertex x="2.308859375" y="-1.95071875"/>
@@ -9852,7 +9852,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="5.679440625" y="0.975359375"/>
 <vertex x="5.679440625" y="1.75768125"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-6.64718125" y="0.95758125"/>
 <vertex x="-5.68198125" y="0.95758125"/>
 <vertex x="-5.68198125" y="0.99821875"/>
@@ -9862,7 +9862,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="-2.20218125" y="1.82371875"/>
 <vertex x="-6.64718125" y="1.844040625"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-6.64718125" y="0.95758125"/>
 <vertex x="-6.64718125" y="-1.94818125"/>
 <vertex x="-2.20218125" y="-1.94818125"/>
@@ -9881,7 +9881,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="-5.68198125" y="0.955040625"/>
 <vertex x="-6.64718125" y="0.955040625"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="6.7945" y="6.309359375"/>
 <vertex x="6.7945" y="1.800859375"/>
 <vertex x="7.6581" y="1.800859375"/>
@@ -9893,13 +9893,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="11.2395" y="5.425440625"/>
 <vertex x="11.2395" y="6.3119"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-0.84328125" y="4.455159375"/>
 <vertex x="2.286" y="4.455159375"/>
 <vertex x="2.286" y="3.61188125"/>
 <vertex x="-0.84328125" y="3.61188125"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-2.20218125" y="6.289040625"/>
 <vertex x="-2.20218125" y="1.8415"/>
 <vertex x="2.245359375" y="1.8415"/>
@@ -9909,7 +9909,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="2.245359375" y="5.40258125"/>
 <vertex x="2.245359375" y="6.289040625"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-8.016240625" y="1.831340625"/>
 <vertex x="-8.016240625" y="2.69748125"/>
 <vertex x="-10.29208125" y="2.69748125"/>
@@ -9920,7 +9920,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <vertex x="-11.15568125" y="6.26871875"/>
 <vertex x="-11.15568125" y="1.831340625"/>
 </polygon>
-<polygon width="0" layer="51">
+<polygon width="0.0254" layer="21">
 <vertex x="-8.016240625" y="1.831340625"/>
 <vertex x="-7.566659375" y="1.831340625"/>
 <vertex x="-6.708140625" y="2.68478125"/>
