@@ -128,6 +128,8 @@ class Clrc663 {
     void iso_14443A_init();
     void transmit_enable(bool enable);
     int iso_14443A_reqa(uint8_t *atqa);
+    int iso_14443A_select(uint8_t *uid);
+    int iso_14443A_rats(uint8_t *ats);
 };
 
 #endif

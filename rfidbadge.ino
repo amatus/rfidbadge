@@ -15,44 +15,56 @@ void setup()
   pinMode(SELECT, INPUT_PULLUP);
   Serial.begin(9600);
   lcd.begin(0x08);
-  lcd.clear();
-  lcd.drawstring(0, 0, "Scanning...");
-  lcd.display();
   Wire.begin();
-  rc663.iso_14443A_init();
 }
 
 void loop()
 {
-  rc663.transmit_enable(true);
-  uint8_t atqa[2];
-  int rc = rc663.iso_14443A_reqa(atqa);
-  rc663.transmit_enable(false);
-  Serial.print("rc = ");
-  Serial.println(rc);
-  Serial.print("atqa = ");
-  Serial.print(atqa[0], HEX);
-  Serial.print(", ");
-  Serial.println(atqa[1], HEX);
+  lcd.clear();
+  lcd.drawstring(0, 0, "Scanning...");
+  rc663.iso_14443A_init();
+  int rc;
+  {
+    Serial.println("Requesting ATQA");
+    uint8_t atqa[2];
+    rc663.transmit_enable(true);
+    rc = rc663.iso_14443A_reqa(atqa);
+    Serial.print("rc = ");
+    Serial.println(rc);
+    Serial.print("ATQA = ");
+    Serial.print(atqa[0], HEX);
+    Serial.print(", ");
+    Serial.println(atqa[1], HEX);
+  }
   if (rc == 2) {
     digitalWrite(LED, HIGH);
-    char buf[2];
-    itoa(atqa[0], buf, 16);
-    lcd.drawstring(0, 1, buf);
-    itoa(atqa[1], buf, 16);
-    lcd.drawstring(0, 2, buf);
   } else {
     digitalWrite(LED, LOW);
-    lcd.drawstring(0, 1, "  ");
-    lcd.drawstring(0, 2, "  ");
+    goto out;
   }
-  if (digitalRead(MENU) == LOW) {
-    lcd.drawstring(0, 3, "MENU  ");
-  } else if (digitalRead(SELECT) == LOW) {
-    lcd.drawstring(0, 3, "SELECT");
-  } else {
-    lcd.drawstring(0, 3, "      ");
+  {
+    Serial.println("Selecting");
+    uint8_t uid[10];
+    rc = rc663.iso_14443A_select(uid);
+    Serial.print("rc = ");
+    Serial.println(rc);
+    lcd.drawstring(0, 1, "ID:");
+    char buf[3];
+    for (int i = 0; i < rc; ++i) {
+      Serial.print(uid[i], HEX);
+      Serial.print(" ");
+      if (uid[i] < 0x10) {
+        buf[0] = '0';
+        itoa(uid[i], &buf[1], 16);
+      } else {
+        itoa(uid[i], buf, 16);
+      }
+      lcd.drawstring(i * 3 * 6, 2, buf);
+    }
+    Serial.print("\n");
   }
+out:
+  rc663.transmit_enable(false);
   lcd.display();
   delay(1000);
 }
