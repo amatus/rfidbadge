@@ -168,6 +168,16 @@
 <text x="66.9925" y="7.9375" size="1.016" layer="25" rot="R90">S1</text>
 <text x="66.9925" y="39.37" size="1.016" layer="25" rot="R90">S2</text>
 <text x="33.02" y="1.27" size="1.27" layer="16" font="vector" rot="MR0">RFID Badge v1 by amatus</text>
+<polygon width="0.254" layer="21">
+<vertex x="44.45" y="4.1275"/>
+<vertex x="45.085" y="5.08"/>
+<vertex x="43.815" y="5.08"/>
+</polygon>
+<polygon width="0.254" layer="21">
+<vertex x="33.655" y="1.5875"/>
+<vertex x="32.7025" y="2.2225"/>
+<vertex x="32.7025" y="0.9525"/>
+</polygon>
 </plain>
 <libraries>
 <library name="SparkFun-DigitalIC">
@@ -2302,11 +2312,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="PROD_ID" value="2N7002ET1GOSCT-ND" x="36.83" y="39.6875" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="37.465" y="41.91" size="1.016" layer="25" rot="R90"/>
 </element>
-<element name="ISP" library="pinhead" package="2X03" value="" x="37.7825" y="2.8575">
+<element name="ISP" library="pinhead" package="2X03" value="" x="37.7825" y="2.8575" smashed="yes">
 <attribute name="PROD_ID" value="952-2121-ND" x="37.7825" y="2.8575" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="33.9725" y="6.0325" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="33.9725" y="-1.5875" size="1.27" layer="27"/>
 </element>
-<element name="FTDI" library="pinhead" package="1X06" value="" x="50.8" y="2.54">
+<element name="FTDI" library="pinhead" package="1X06" value="" x="50.8" y="2.54" smashed="yes">
 <attribute name="PROD_ID" value="952-2270-ND" x="50.8" y="2.54" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="46.2788" y="4.3688" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="43.18" y="-0.635" size="1.27" layer="27"/>
 </element>
 <element name="C19" library="rcl" package="C0603K" value="0.1 uF" x="56.1975" y="5.715" smashed="yes">
 <attribute name="PROD_ID" value="311-1088-1-ND" x="110.8075" y="-70.485" size="1.778" layer="27" display="off"/>
