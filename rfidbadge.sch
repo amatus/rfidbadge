@@ -7232,8 +7232,8 @@ www.irf.com&lt;p&gt;
 <library name="battery_holder">
 <packages>
 <package name="AAA_X3">
-<pad name="NEG" x="23.7236" y="0" drill="1" shape="octagon"/>
-<pad name="POS" x="23.7236" y="-12.7" drill="1" shape="octagon"/>
+<pad name="NEG" x="23.7236" y="0" drill="1" diameter="1.9304" shape="octagon"/>
+<pad name="POS" x="23.7236" y="-12.7" drill="1" diameter="1.9304" shape="octagon"/>
 <wire x1="26.3144" y1="18.7452" x2="26.3144" y2="-18.7452" width="0.127" layer="21"/>
 <wire x1="26.3144" y1="-18.7452" x2="-26.3144" y2="-18.7452" width="0.127" layer="21"/>
 <wire x1="-26.3144" y1="-18.7452" x2="-26.3144" y2="18.7452" width="0.127" layer="21"/>
