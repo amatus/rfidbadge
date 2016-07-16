@@ -125,6 +125,7 @@ class Clrc663 {
     Clrc663(uint8_t address = 0x2A);
     uint8_t read_reg(Reg reg);
     void write_reg(Reg reg, uint8_t val);
+    void irq_wait(uint8_t irq0en, uint8_t irq1en);
     void iso_14443A_init();
     void transmit_enable(bool enable);
     int iso_14443A_reqa(uint8_t *atqa);

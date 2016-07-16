@@ -23,6 +23,15 @@ void Clrc663::write_reg(Reg reg, uint8_t val)
   Wire.endTransmission();
 }
 
+void Clrc663::irq_wait(uint8_t irq0en, uint8_t irq1en)
+{
+  write_reg(IRQ0En, irq0en);
+  write_reg(IRQ1En, irq1en);
+  while (!(read_reg(IRQ1) & 0x40)); //Wait untill global interrupt set
+  write_reg(IRQ0En, 0x00);
+  write_reg(IRQ1En, 0x00);
+}
+
 void Clrc663::iso_14443A_init()
 {
   //> Configure Timers
@@ -54,16 +63,8 @@ void Clrc663::iso_14443A_init()
   //> Write in Fifo: Tx and Rx protocol numbers(0,0)
   write_reg(FIFOData, 0x00);         //
   write_reg(FIFOData, 0x00);         //
-  ////allows the Idle interrupt request means the command is finished and set gobal irq
-  write_reg(IRQ0En, 0x10);          // Idle interrupt(Command terminated), RC663_BIT_IDLEIRQ=0x10
-  write_reg(IRQ1En, 0x40);         //bit 6Set to logic 1, it allows the global interrupt request (indicated by the bit
-                                      //GlobalIrq) to be propagated to the interrupt pin
   write_reg(Command, LoadProtocol);    // Start RC663 command "Load Protocol"=0x0d
-  while (!(read_reg(IRQ1) & 0x40)); //Wait untill global interrupt set,meanning the command has done execution
-
-  write_reg(IRQ0, 0x00);              //Disable Irq 0,1 sources
-  write_reg(IRQ1, 0x00);              //
-
+  irq_wait(0x10, 0x00);              // Wait for idle interrupt meaning the command has finished
 
   write_reg(FIFOControl, 0xB0);       // Flush_FiFo
 
@@ -111,12 +112,10 @@ int Clrc663::iso_14443A_reqa(uint8_t *atqa)
 //> =============================================
   write_reg(TXWaitCtrl, 0xC0);       //  TxWaitStart at the end of Rx data
   write_reg(TxWaitLo, 0x0B);         // Set min.time between Rx and Tx or between two Tx
-  //tempErrorCode=read_reg(Error);
   write_reg(T0ReloadHi, 0x08);       //> Set timeout for this command cmd. Init reload values for timers-0,1
   write_reg(T0ReloadLo, 0x94);
   write_reg(T1ReloadHi, 0x00);
   write_reg(T1ReloadLo, 0x00);
-  write_reg(IRQ0, 0x08);  //why ? ,传送完成中断，TxIrq Set, when data transmission is completed, which is immediately after the last bit is sent. Can only be reset if Set is cleared.
   write_reg(RxWait, 0x90);    // bit9,If set to 1, the RxWait time is RxWait x(0.5/DBFreq).  bit0--bit6,Defines the time after sending, where every input is ignored
   write_reg(TxDataNum, 0x0F);
 //> ---------------------
@@ -132,12 +131,7 @@ int Clrc663::iso_14443A_reqa(uint8_t *atqa)
   delay(10);
   write_reg(FIFOData, 0x26);       //Write ReqA=26(wake up all the idle card ,not sleeping，0x52) into FIFO
   write_reg(Command, Transceive);        // Start RC663 command "Transcieve"=0x07. Activate Rx after Tx finishes.
-
-  write_reg(IRQ0En, 0x18);         // Wait until the command is finished. Enable IRQ sources.
-  write_reg(IRQ1En, 0x42);         //
-  while (!(read_reg(IRQ1) & 0x40)); //Wait untill global interrupt set
-  write_reg(IRQ0En, 0x00);        //
-  write_reg(IRQ1En, 0x00);        //
+  irq_wait(0x18, 0x2);              // Wait for idle, tx, or timer1, not sure why
   uint8_t len = read_reg(FIFOLength); //read FIFO length
   for (int i = 0; i < len; ++i) {
     atqa[i] = read_reg(FIFOData);   // Read FIFO, expecting: the two byte ATQA,we could tell from ATQA how long the UID is ,4、7、10 byte?,then decide wether to go through  the subsquent anti-collision procedure
@@ -153,19 +147,10 @@ int Clrc663::iso_14443A_select(uint8_t *uid)
   write_reg(Command, Idle);           // Terminate any running command.
   write_reg(FIFOControl, 0xB0);       // Flush_FiFo
 
-  write_reg(IRQ0, 0x7F);              // Clear all IRQ 0,1 flags
-  write_reg(IRQ1, 0x7F);             //
   write_reg(FIFOData, 0x93);                 //Write "Select" cmd into FIFO (SEL=93, NVB=20,cascade level-1)
   write_reg(FIFOData, 0x20);                 //字节计数=2
   write_reg(Command, Transceive);          //Start tranceive command
-
-  write_reg(IRQ0En, 0x18);           //Enable Irqs 0,1
-  write_reg(IRQ1En, 0x42);           //Enable the global IRQ to be propagated to the IRQ pin
-  while (!(read_reg(IRQ1) & 0x40));    // Wait until the command is finished
-  write_reg(IRQ0En, 0x00);                    //Disable IRQ0 interrupt sources
-  write_reg(IRQ0En, 0x00);
-  //read_reg(IRQ0);                    // Read IRQ 0,1 Status register
-  //read_reg(IRQ1);       //
+  irq_wait(0x18, 0x2);              // Wait for idle, tx, or timer1, not sure why
 
   uint8_t len = read_reg(FIFOLength);//read FIFO length
   for (int i = 0; i < len; i++) {
@@ -180,20 +165,13 @@ int Clrc663::iso_14443A_select(uint8_t *uid)
   write_reg(Command, Idle);           // Terminate any running command.
   write_reg(FIFOControl, 0xB0);       // Flush_FiFo
 
-  write_reg(IRQ0, 0x7F);              // Clear all IRQ 0,1 flags
-  write_reg(IRQ1, 0x7F);             //
   write_reg(FIFOData, 0x93);          //select
   write_reg(FIFOData, 0x70);          //字节计数=7
   for (int i = 0; i < len; i++) {
     write_reg(FIFOData, uid[i]);  // Read FIFO,Expected - Complete UID (one PICC in HF)
   }
   write_reg(Command, Transceive);          //Start tranceive command ,expecting to receive SAK ,select acknowlegement
-
-  write_reg(IRQ0En, 0x18);           //Enable Irqs 0,1
-  write_reg(IRQ1En, 0x42);           //Enable the global IRQ to be propagated to the IRQ pin
-  while (!(read_reg(IRQ1) & 0x40));    // Wait until the command is finished
-  write_reg(IRQ0En, 0x00);                    //Disable IRQ0 interrupt sources
-  write_reg(IRQ0En, 0x00);
+  irq_wait(0x18, 0x2);              // Wait for idle, tx, or timer1, not sure why
   uint8_t sak = read_reg(FIFOData);  // Read FIFO,Expecting SAK,here wo should next level of anti-collision
                                       //if SAK's bit2=1,then UID is not finished yet
   //结束防冲突环.Here we assuming the UID is 4 bytes ,so just finish the anti-collision loop
@@ -206,16 +184,10 @@ int Clrc663::iso_14443A_rats(uint8_t *ats)
   write_reg(RxCrcPreset, 0x19);          //
   write_reg(Command, Idle);           // Terminate any running command.
   write_reg(FIFOControl, 0xB0);       // Flush_FiFo
-  write_reg(IRQ0, 0x7F);              // Clear all IRQ 0,1 flags
-  write_reg(IRQ1, 0x7F);             //
   write_reg(FIFOData, 0xE0);          //RATS,E0为命令，
   write_reg(FIFOData, 0x80);          //5为FSDI(5对应于64,8对应于256)， 1为CID（card ID），为此卡在此次通信中的临时ID
   write_reg(Command, Transceive);          //Start tranceive command ,expecting to receive SAK ,select acknowlegement
-  write_reg(IRQ0En, 0x18);           //Enable Irqs 0,1
-  write_reg(IRQ1En, 0x42);           //Enable the global IRQ to be propagated to the IRQ pin
-  while (!(read_reg(IRQ1) & 0x40));    // Wait until the command is finished
-  write_reg(IRQ0En, 0x00);                    //Disable IRQ0 interrupt sources
-  write_reg(IRQ0En, 0x00);
+  irq_wait(0x18, 0x2);              // Wait for idle, tx, or timer1, not sure why
   uint8_t len = read_reg(FIFOLength);//read FIFO length
   for (int i = 0; i < len; i++) {
     ats[i] = read_reg(FIFOData);  // Read FIFO,Expecting ATS,after receiving the ATS the PICC enters protocol state,ready to process APDUs
