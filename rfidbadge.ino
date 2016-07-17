@@ -2,25 +2,17 @@
 #include <Wire.h>
 #include "CLRC663.h"
 #include "ST7565.h"
+#include "screens.h"
 
-#define LED    (8)
 #define MENU   (3)
 #define SELECT (4)
 #define EEPROM_MAGIC  (0xDB)
 #define DEFAULT_SCAN_DECISECONDS  (10)
+
 Clrc663 rc663 = Clrc663();
-ST7565 lcd = ST7565(11, 13, 9, 12, 10);
 unsigned long scan_millis; // time between scans
 unsigned long last_scan;   // last time scanned
-boolean scan; // is scanning enabled
-unsigned long led_millis = 5 * 1000;  // time to leave the led on
-unsigned long last_led;    // last time the led was turned on
 
-void trigger_led()
-{
-  digitalWrite(LED, HIGH);
-  last_led = millis();
-}
 
 void setup()
 {
@@ -40,9 +32,7 @@ void setup()
   }
   last_scan = millis() - scan_millis;
   scan = 0 != scan_millis;
-  lcd.clear();
-  lcd.drawstring(0, 0, scan ? (char *)"Scanning..." : (char *)"Not scanning!");
-  lcd.display();
+  display_screen(SCREEN_SCANNING, 0);
   trigger_led();
 }
 
@@ -95,13 +85,27 @@ out:
 
 void loop()
 {
-  if (scan && millis() - last_scan >= scan_millis) {
+  /* Do scan if it's time */
+  if (screen == SCREEN_SCANNING && scan && millis() - last_scan >= scan_millis) {
     last_scan = millis();
     do_scan();
   }
-  if (digitalRead(LED) == HIGH && millis() - last_led >= led_millis) {
+  /* Turn off backlight if it's time */
+  if (digitalRead(LED) == HIGH && millis() - last_led >= LED_MILLIS) {
     digitalWrite(LED, LOW);
   }
+  /* Read switches, do edge detection */
+  static boolean select_pressed, menu_pressed; /* previous state of the buttons */
+  bool select = digitalRead(SELECT) == LOW;
+  bool menu = digitalRead(MENU) == LOW;
+  if (!select_pressed && select) {
+    button_transition(SELECT_BUTTON);
+  }
+  if (!menu_pressed && menu) {
+    button_transition(MENU_BUTTON);
+  }
+  select_pressed = select;
+  menu_pressed = menu;
 }
 
 /* vim: set expandtab ts=2 sw=2: */
