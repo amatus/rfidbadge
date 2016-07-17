@@ -2,6 +2,7 @@
 #include <Wire.h>
 #include "CLRC663.h"
 #include "ST7565.h"
+#include "globals.h"
 #include "screens.h"
 
 #define MENU   (3)
@@ -9,10 +10,11 @@
 #define EEPROM_MAGIC  (0xDB)
 #define DEFAULT_SCAN_DECISECONDS  (10)
 
+ST7565 lcd = ST7565(11, 13, 9, 12, 10);
 Clrc663 rc663 = Clrc663();
-unsigned long scan_millis; // time between scans
-unsigned long last_scan;   // last time scanned
 
+unsigned long scan_millis; /* time between scans */
+unsigned long last_scan;   /* last time scanned */
 
 void setup()
 {
