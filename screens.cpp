@@ -21,12 +21,17 @@ void display_screen(Screen screen, uint8_t selection)
   switch (screen) {
     case SCREEN_SCANNING:
       lcd.drawstring(0, 0, scan ? (char *)"Scanning..." : (char *)"Not scanning!");
+      /* Special characters
+      lcd.drawstring(0, 1, "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f");
+      lcd.drawstring(0, 2, "\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f");
+      lcd.drawstring(0, 3, "\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2a\x2b\x2c\x2d\x2e\x2f");
+      */
       break;
     case SCREEN_MENU1:
       lcd.drawstring(6, 0, "==Menu==");
       lcd.drawstring(6, 1, "Scaning frequency");
       lcd.drawstring(6, 2, "Exit");
-      lcd.drawchar(0, 1 + selection, '*');
+      lcd.drawchar(0, 1 + selection, '\x10');
       break;
     case SCREEN_FREQUENCY:
       lcd.drawstring(6, 0, "=Scanning frequency=");
@@ -40,7 +45,7 @@ void display_screen(Screen screen, uint8_t selection)
       }
       lcd.drawstring(6, 2, "+ 0.1 seconds");
       lcd.drawstring(6, 3, "- 0.1 seconds");
-      lcd.drawchar(0, 1 + selection, '*');
+      lcd.drawchar(0, 1 + selection, '\x10');
       break;
   }
   lcd.display();
