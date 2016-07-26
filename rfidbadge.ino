@@ -38,8 +38,8 @@ void setup()
   pinMode(SELECT, INPUT_PULLUP);
   Serial.begin(9600);
   Wire.begin();
-  byte magic = EEPROM.read(MAGIC_ADDRESS);
-  byte contrast = DEFAULT_CONTRAST;
+  uint8_t contrast = DEFAULT_CONTRAST;
+  uint8_t magic = EEPROM.read(MAGIC_ADDRESS);
   if (EEPROM_MAGIC != magic) {
     EEPROM.write(MAGIC_ADDRESS, EEPROM_MAGIC);
     EEPROM.write(SCAN_ADDRESS, DEFAULT_SCAN_DECISECONDS);
