@@ -117,8 +117,8 @@ void loop()
   /* Read switches, do edge detection */
   static boolean select_pressed, menu_pressed; /* previous state of the buttons */
   static unsigned long select_millis, menu_millis; /* when the button was pressed */
-  bool select = digitalRead(SELECT) == LOW;
-  bool menu = digitalRead(MENU) == LOW;
+  boolean select = digitalRead(SELECT) == LOW;
+  boolean menu = digitalRead(MENU) == LOW;
   if (select) {
     if (!select_pressed) {
       select_millis = millis();
